@@ -1,0 +1,9 @@
+{
+  "label": "Beginner Tutorial",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Beginner Tutorial",
+    "description": "Learn Bujji from the first line of code: values, variables, arithmetic, blocks, conditionals, and loops."
+  }
+}

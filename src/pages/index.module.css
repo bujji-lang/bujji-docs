@@ -1,0 +1,147 @@
+.hero {
+  padding: 4.5rem 1.5rem 3.5rem;
+  background:
+    linear-gradient(135deg, rgba(8, 127, 140, 0.14), transparent 42%),
+    linear-gradient(315deg, rgba(242, 159, 5, 0.2), transparent 34%),
+    var(--bujji-panel);
+  border-bottom: 1px solid var(--bujji-line);
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.heroCopy h1 {
+  max-width: 760px;
+  margin: 0 0 1rem;
+  color: var(--bujji-ink);
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--ifm-color-primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+:global([data-theme='dark']) .eyebrow {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 0;
+  color: var(--bujji-muted);
+  font-size: 1.18rem;
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.7rem;
+}
+
+.heroCode :global(.bujjiCodeBlock) {
+  margin: 0;
+}
+
+.section {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.sectionHeader {
+  max-width: 680px;
+  margin-bottom: 1.4rem;
+}
+
+.sectionHeader h2,
+.learningContent h2 {
+  margin: 0 0 0.8rem;
+  color: var(--bujji-ink);
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  letter-spacing: 0;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.featureCard {
+  padding: 1.25rem;
+  border: 1px solid var(--bujji-line);
+  border-radius: 8px;
+  background: var(--bujji-panel);
+}
+
+.featureCard h3 {
+  margin: 0 0 0.55rem;
+  color: var(--bujji-ink);
+  font-size: 1.08rem;
+}
+
+.featureCard p,
+.learningContent p {
+  margin: 0;
+  color: var(--bujji-muted);
+  line-height: 1.65;
+}
+
+.learningBand {
+  padding: 0 1.5rem 4rem;
+}
+
+.learningContent {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid var(--bujji-line);
+  border-radius: 8px;
+  background: var(--bujji-panel);
+}
+
+@media (max-width: 900px) {
+  .heroInner,
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .learningContent {
+    display: grid;
+    align-items: start;
+  }
+}
+
+@media (max-width: 520px) {
+  .actions {
+    display: grid;
+  }
+
+  .actions a,
+  .learningContent a {
+    width: 100%;
+  }
+}

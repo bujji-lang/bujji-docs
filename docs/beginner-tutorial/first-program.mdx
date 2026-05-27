@@ -1,0 +1,59 @@
+---
+sidebar_position: 1
+title: Your First Bujji Program
+description: Write your first Bujji program and understand how Bujji talks to the computer.
+---
+
+import BujjiCode from '@site/src/components/BujjiCode';
+
+# Your First Bujji Program
+
+Bujji is a programming language made for Telugu people. The keywords are written
+in romanised Telugu, and the sentence style tries to feel natural for Telugu
+speakers.
+
+Let us start with a tiny program:
+
+<BujjiCode code={`"namaskaram" anicheppu`} />
+
+This tells the computer to print:
+
+```text
+namaskaram
+```
+
+Think of `anicheppu` as "say this" or "print this". The value comes first, and
+the action comes after it.
+
+## Storing a value
+
+Most programs need to remember information. In Bujji, you can store a value in a
+container called a variable.
+
+<BujjiCode code={`name = "Anand" bujji
+"namaskaram $name" anicheppu`} />
+
+Here:
+
+- `name` is the container.
+- `"Anand"` is the value stored in that container.
+- `bujji` finishes the statement.
+- `$name` puts the stored value inside the string.
+
+## A complete tiny program
+
+<BujjiCode code={`name = "Anand" bujji
+age = 25 bujji
+
+"namaskaram $name" anicheppu
+"mee age $age" anicheppu`} />
+
+This program stores two values and prints them. You do not need to tell Bujji the
+type of `name` or `age`. Bujji understands the value at runtime.
+
+## What you learned
+
+- A Bujji program is made of small instructions.
+- Use `anicheppu` to print a value.
+- Use `bujji` to finish a statement.
+- Variables are containers that store values.

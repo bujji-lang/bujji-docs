@@ -1,0 +1,66 @@
+---
+sidebar_position: 2
+title: Variables and Dynamic Types
+description: Learn how Bujji stores values and why it is dynamically typed.
+---
+
+import BujjiCode from '@site/src/components/BujjiCode';
+
+# Variables and Dynamic Types
+
+Bujji is dynamically typed. That means you do not write the type before a
+variable name. Bujji looks at the value and works with it.
+
+In Bujji, a variable is a container. The value is what you place inside that
+container.
+
+## Two ways to create variables
+
+Bujji supports both of these styles:
+
+<BujjiCode code={`city = "Hyderabad" bujji
+city ante "Hyderabad" bujji`} />
+
+Both lines mean: store `"Hyderabad"` in the `city` container.
+
+Use whichever style feels clearer while learning. The `ante` form is useful
+because it reads like "city means Hyderabad".
+
+## Different kinds of values
+
+Because Bujji is dynamically typed, the same declaration style works for many
+kinds of values.
+
+<BujjiCode code={`name = "Anand" bujji
+age = 25 bujji
+height = 5.8 bujji
+student = nijam bujji`} />
+
+The value decides the type:
+
+- `"Anand"` is text.
+- `25` is a number.
+- `5.8` is a decimal number.
+- `nijam` can represent true.
+
+## Changing a variable
+
+A variable can receive a new value later.
+
+<BujjiCode code={`score = 10 bujji
+"first score $score" anicheppu
+
+score = 20 bujji
+"new score $score" anicheppu`} />
+
+The container is still called `score`, but the value inside it changed from `10`
+to `20`.
+
+## Beginner mental model
+
+Imagine a labelled box:
+
+<BujjiCode code={`name = "Anand" bujji`} />
+
+The label on the box is `name`. The thing inside the box is `"Anand"`.
+Whenever you use `name`, Bujji looks inside the box and uses the stored value.
