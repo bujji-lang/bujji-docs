@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbujji_lang=self.webpackChunkbujji_lang||[]).push([["806"],{4389(e,a,n){n.r(a),n.d(a,{default:()=>c});var s=n(4848);function c(){return(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)("h1",{children:"My React page"}),(0,s.jsx)("p",{children:"This is a React page"})]})}n(6540)}}]);

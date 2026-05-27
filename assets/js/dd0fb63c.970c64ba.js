@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbujji_lang=self.webpackChunkbujji_lang||[]).push([["972"],{1252(e){e.exports=JSON.parse('{"metadata":{"permalink":"/bujji-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
