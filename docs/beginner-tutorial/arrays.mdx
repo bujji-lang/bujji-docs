@@ -1,0 +1,61 @@
+---
+sidebar_position: 7
+title: Arrays
+description: Learn how to group multiple values, access them, and change them.
+---
+
+import BujjiCode from '@site/src/components/BujjiCode';
+
+# Arrays
+
+When writing programs, you often need to store a list of values together. In Bujji, you can use **Arrays** (similar to lists in Python) to group multiple items in a single container.
+
+## Creating an Array
+
+You can create an array by listing values separated by commas inside square brackets `[` and `]`.
+
+<BujjiCode code={`numbers = [10, 20, 30] bujji
+fruits = ["mamidipandu", "kela", "dosa"] bujji`} />
+
+Just like other variables in Bujji, you do not need to specify any types. An array can store any kind of values.
+
+## Accessing Elements
+
+Each item in an array has a position number called an **index**. Indexing starts at `0`.
+- The first element is at index `0`.
+- The second element is at index `1`.
+- The third element is at index `2`, and so on.
+
+To get a single element from an array, write the array name followed by the index in square brackets:
+
+<BujjiCode code={`arr = [10, 20, 30] bujji
+x = arr[1] bujji
+"element is $x" anicheppu`} />
+
+This will print:
+```text
+element is 20
+```
+
+## Changing Elements
+
+You can change the value of an element at a specific index by assigning a new value to it:
+
+<BujjiCode code={`arr = [10, 20, 30] bujji
+arr[1] = 99 bujji
+x = arr[1] bujji
+"element is $x" anicheppu`} />
+
+After the assignment, the value at index `1` changes from `20` to `99`. This prints:
+```text
+element is 99
+```
+
+## Looping through Arrays
+
+If you want to iterate over array elements or work with numeric ranges, see the dedicated [For Loops](./for-loops) page.
+
+## What you learned
+
+- Create arrays using square brackets: `[value1, value2, ...]`.
+- Read and change elements using index numbers starting from `0` (e.g. `arr[0]`).

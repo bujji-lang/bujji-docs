@@ -10,16 +10,21 @@ export type BujjiCodeProps = {
 
 export const keywords = new Set([
   'aagu',
+  'adugu',
   'ante',
   'anicheppu',
   'bujji',
   'chaalu',
+  'idhi',
   'ithe',
+  'ki',
   'leda',
+  'lo',
   'malli',
   'nijam',
   'pampi',
   'poni',
+  'prati',
 ]);
 
 export const operators = new Set(['=', '+', '-', '*', '/', '%', '^', '>', '<', '!', ':']);

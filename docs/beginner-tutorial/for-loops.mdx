@@ -1,0 +1,117 @@
+---
+sidebar_position: 8
+title: For Loops
+description: Learn how to repeat code over collections or ranges using lo prati loops and the range function.
+---
+
+import BujjiCode from '@site/src/components/BujjiCode';
+
+# For Loops
+
+While loops (`malli`) are great when you want to repeat code as long as a condition is true. However, when you want to loop over a collection (like an array) or a range of numbers, **For Loops** are much cleaner.
+
+In Bujji, a for loop uses a natural Telugu-style syntax:
+
+<BujjiCode code={`expression/function/array lo prati var_name ki:
+    statements`} />
+
+Think of this as: *"For each `var_name` in the given collection, run the following statements."*
+
+---
+
+## Looping over an Array
+
+You can loop through all elements of an array from start to finish.
+
+Here is a simple example:
+
+<BujjiCode code={`arr = [1, 2, 3] bujji
+
+arr lo prati i ki:
+    "i is $i" anicheppu`} />
+
+This prints:
+```text
+i is 1
+i is 2
+i is 3
+```
+
+---
+
+## The Built-in `range` Function
+
+To loop a specific number of times, you can use the built-in `range` function.
+
+The `range` function takes **two arguments**:
+1. `start`: The starting number (inclusive).
+2. `end`: The ending number (exclusive).
+
+It returns an array of numbers from `start` up to (but not including) `end`.
+
+In Bujji, function arguments are written before the function name, separated by commas. For example, `1, 10 range` generates a list of numbers from `1` to `9`.
+
+### Range Loop Example
+
+Here is how you loop through a range of numbers:
+
+<BujjiCode code={`1, 10 range lo prati value ki:
+    "value is $value" anicheppu`} />
+
+This prints:
+```text
+value is 1
+value is 2
+value is 3
+value is 4
+value is 5
+value is 6
+value is 7
+value is 8
+value is 9
+```
+
+---
+
+## Loop Controls: `aagu` and `chaalu`
+
+You can use the loop control keywords inside for loops just as you do in while loops:
+- `aagu` stops the loop completely (break).
+- `chaalu` skips the rest of the current round and proceeds with the next item (continue).
+
+### Skipping with `chaalu`
+
+<BujjiCode code={`1, 6 range lo prati i ki:
+    i == 3 ithe:
+        chaalu
+    "i is $i" anicheppu`} />
+
+This skips printing `3` and outputs:
+```text
+i is 1
+i is 2
+i is 4
+i is 5
+```
+
+### Stopping early with `aagu`
+
+<BujjiCode code={`1, 6 range lo prati i ki:
+    i == 4 ithe:
+        aagu
+    "i is $i" anicheppu`} />
+
+This stops when `i` is `4` and outputs:
+```text
+i is 1
+i is 2
+i is 3
+```
+
+---
+
+## What you learned
+
+- Loop through arrays using the syntax: `array lo prati var_name ki:`.
+- Generate lists of numbers with the `start, end range` function.
+- Control loop iteration using `aagu` (break) and `chaalu` (continue).
